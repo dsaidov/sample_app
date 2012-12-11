@@ -27,7 +27,7 @@ development:
 #  pool: 5
 #  timeout: 5000
 
-test:
+test: &test
   adapter: postgresql
   host: localhost
   username: dilshod
@@ -38,3 +38,6 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+cucumber:
+  <<: *test
